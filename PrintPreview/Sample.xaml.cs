@@ -108,7 +108,7 @@ namespace PrintPreview
 
             // Add the World Map Kit layer as the background
             // Please input your ThinkGeo Cloud Client ID / Client Secret to enable the background map. 
-            ThinkGeoCloudRasterMapsLayer worldMapKitLayer = new ThinkGeoCloudRasterMapsLayer("jk1pD3H_kfIVY4_etIK8gJ3RRFxVbxTOrAQoJZAw3WU~", "bOX6PZkIGS2xo-EHzs4KGi1-fvfJWebGK7YglhYNuDd5QvXubSRAUg~~");
+            ThinkGeoCloudRasterMapsLayer worldMapKitLayer = new ThinkGeoCloudRasterMapsLayer("ThinkGeo Cloud Client ID", "ThinkGeo Cloud Client Secret");
             mapPrinterLayer.Layers.Add(worldMapKitLayer);
 
             // Setup the Countries mapping layer
