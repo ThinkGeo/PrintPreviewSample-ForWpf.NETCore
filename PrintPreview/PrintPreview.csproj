@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Banner.xaml" />
+    <None Remove="DataGridPrinterLayerProperty.xaml" />
+    <None Remove="Data\Countries02_3857.dbf" />
+    <None Remove="Data\Countries02_3857.ids" />
+    <None Remove="Data\Countries02_3857.idx" />
+    <None Remove="Data\Countries02_3857.shp" />
+    <None Remove="Data\Countries02_3857.shx" />
+    <None Remove="Footer.xaml" />
+    <None Remove="ImagePrinterLayerProperty.xaml" />
+    <None Remove="Images\area.jpg" />
+    <None Remove="Images\Compass.png" />
+    <None Remove="Images\line.jpg" />
+    <None Remove="Images\ms.ico" />
+    <None Remove="Images\point.jpg" />
+    <None Remove="Images\ThinkGeoLogo.jpg" />
+    <None Remove="LabelPrinterLayerProperty.xaml" />
+    <None Remove="MapPrinterLayerProperty.xaml" />
+    <None Remove="Resources\bannerad_offline.html" />
+    <None Remove="Resources\bannerad_offline.png" />
+    <None Remove="Resources\btn_active_contact_us.png" />
+    <None Remove="Resources\btn_active_discussion_forums.png" />
+    <None Remove="Resources\btn_active_map_suite_products.png" />
+    <None Remove="Resources\btn_active_support_center.png" />
+    <None Remove="Resources\btn_active_thinkgeo_wiki.png" />
+    <None Remove="Resources\btn_inactive_contact_us.png" />
+    <None Remove="Resources\btn_inactive_discussion_forums.png" />
+    <None Remove="Resources\btn_inactive_map_suite_products.png" />
+    <None Remove="Resources\btn_inactive_support_center.png" />
+    <None Remove="Resources\btn_inactive_thinkgeo_wiki.png" />
+    <None Remove="Resources\Datagrid.png" />
+    <None Remove="Resources\Image.png" />
+    <None Remove="Resources\Label.png" />
+    <None Remove="Resources\masthead_top_blue_1px.png" />
+    <None Remove="Resources\masthead_top_blue_text.png" />
+    <None Remove="Resources\ms.ico" />
+    <None Remove="Resources\online_resources.png" />
+    <None Remove="Resources\Scalebar.png" />
+    <None Remove="Resources\Scaleline.png" />
+    <None Remove="Resources\thinkgeo_logo.png" />
+    <None Remove="Sample.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Countries02_3857.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Countries02_3857.ids">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Countries02_3857.idx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Countries02_3857.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Countries02_3857.shx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\area.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Compass.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\line.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\point.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ThinkGeoLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\bannerad_offline.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="4.6.0-rc1.19456.4" />
+    <PackageReference Include="ThinkGeo.Printers" Version="12.0.0" />
+    <PackageReference Include="ThinkGeo.UI.Wpf" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\ms.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bannerad_offline.png" />
+    <Resource Include="Resources\btn_active_contact_us.png" />
+    <Resource Include="Resources\btn_active_discussion_forums.png" />
+    <Resource Include="Resources\btn_active_map_suite_products.png" />
+    <Resource Include="Resources\btn_active_support_center.png" />
+    <Resource Include="Resources\btn_active_thinkgeo_wiki.png" />
+    <Resource Include="Resources\btn_inactive_contact_us.png" />
+    <Resource Include="Resources\btn_inactive_discussion_forums.png" />
+    <Resource Include="Resources\btn_inactive_map_suite_products.png" />
+    <Resource Include="Resources\btn_inactive_support_center.png" />
+    <Resource Include="Resources\btn_inactive_thinkgeo_wiki.png" />
+    <Resource Include="Resources\Datagrid.png" />
+    <Resource Include="Resources\Image.png" />
+    <Resource Include="Resources\Label.png" />
+    <Resource Include="Resources\masthead_top_blue_1px.png" />
+    <Resource Include="Resources\masthead_top_blue_text.png" />
+    <Resource Include="Resources\ms.ico" />
+    <Resource Include="Resources\online_resources.png" />
+    <Resource Include="Resources\Scalebar.png" />
+    <Resource Include="Resources\Scaleline.png" />
+    <Resource Include="Resources\thinkgeo_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Banner.xaml.cs">
+      <DependentUpon>Banner.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="DataGridPrinterLayerProperty.xaml.cs">
+      <DependentUpon>DataGridPrinterLayerProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Footer.xaml.cs">
+      <DependentUpon>Footer.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ImagePrinterLayerProperty.xaml.cs">
+      <DependentUpon>ImagePrinterLayerProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="LabelPrinterLayerProperty.xaml.cs">
+      <DependentUpon>LabelPrinterLayerProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MapPrinterLayerProperty.xaml.cs">
+      <DependentUpon>MapPrinterLayerProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Sample.xaml.cs">
+      <DependentUpon>Sample.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
