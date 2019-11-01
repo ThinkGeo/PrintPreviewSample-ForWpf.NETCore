@@ -106,8 +106,9 @@ namespace PrintPreview
             ZoomLevelSet zoomLevelSet = new ZoomLevelSet();
             mapPrinterLayer.MapExtent = MapUtil.ZoomToScale(zoomLevelSet.ZoomLevel03.Scale, new RectangleShape(-20026376.39, 20048966.10, 20026376.39, -20048966.10), mapPrinterLayer.MapUnit, (float)mapPrinterLayer.GetBoundingBox().Width, (float)mapPrinterLayer.GetBoundingBox().Height);
 
-            // Add the World Map Kit layer as the background
-            // Please input your ThinkGeo Cloud Client ID / Client Secret to enable the background map. 
+            // This ThinkGeo Cloud test key is exclusively for demonstration purposes and is limited to requesting base map 
+            // tiles only. Do not use it in your own applications, as it may be restricted or disabled without prior notice. 
+            // Please visit https://cloud.thinkgeo.com to create a free key for your own use.
             ThinkGeoCloudRasterMapsLayer worldMapKitLayer = new ThinkGeoCloudRasterMapsLayer("ThinkGeo Cloud Client ID", "ThinkGeo Cloud Client Secret");
             mapPrinterLayer.Layers.Add(worldMapKitLayer);
 
