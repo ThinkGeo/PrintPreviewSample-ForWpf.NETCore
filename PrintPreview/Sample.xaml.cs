@@ -109,8 +109,13 @@ namespace PrintPreview
             // This ThinkGeo Cloud test key is exclusively for demonstration purposes and is limited to requesting base map 
             // tiles only. Do not use it in your own applications, as it may be restricted or disabled without prior notice. 
             // Please visit https://cloud.thinkgeo.com to create a free key for your own use.
-            ThinkGeoCloudRasterMapsLayer worldMapKitLayer = new ThinkGeoCloudRasterMapsLayer("ThinkGeo Cloud Client ID", "ThinkGeo Cloud Client Secret");
-            mapPrinterLayer.Layers.Add(worldMapKitLayer);
+            //ThinkGeoCloudRasterMapsLayer worldMapKitLayer = new ThinkGeoCloudRasterMapsLayer("itZGOI8oafZwmtxP-XGiMvfWJPPc-dX35DmESmLlQIU~", "bcaCzPpmOG6le2pUz5EAaEKYI-KSMny_WxEAe7gMNQgGeN9sqL12OA~~");
+            //worldMapKitLayer.TileCache = null;
+            //mapPrinterLayer.Layers.Add(worldMapKitLayer);
+            ShapeFileFeatureLayer backgroundLayer = new ShapeFileFeatureLayer(@"data/Countries02_3857.shp", FileAccess.Read);
+            backgroundLayer.ZoomLevelSet.ZoomLevel01.ApplyUntilZoomLevel = ApplyUntilZoomLevel.Level20;
+            backgroundLayer.ZoomLevelSet.ZoomLevel01.DefaultAreaStyle = AreaStyle.CreateSimpleAreaStyle(GeoColors.White, GeoColors.Black);
+            mapPrinterLayer.Layers.Add(backgroundLayer);
 
             // Setup the Countries mapping layer
             ShapeFileFeatureLayer shapefileFeatureLayer = new ShapeFileFeatureLayer(@"data/Countries02_3857.shp", FileAccess.Read);
