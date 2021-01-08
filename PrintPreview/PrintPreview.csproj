@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
@@ -86,8 +86,8 @@
 
   <ItemGroup>
     <PackageReference Include="System.Management" Version="4.7.0" />
-    <PackageReference Include="ThinkGeo.Printers" Version="12.2.12" />
-    <PackageReference Include="ThinkGeo.UI.Wpf" Version="12.2.12" />
+    <PackageReference Include="ThinkGeo.Printers" Version="12.3.2" />
+    <PackageReference Include="ThinkGeo.UI.Wpf" Version="12.3.2" />
   </ItemGroup>
 
   <ItemGroup>

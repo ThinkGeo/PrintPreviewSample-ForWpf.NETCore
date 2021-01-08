@@ -495,7 +495,10 @@ namespace PrintPreview
             // Here we sync up the zoom combox to the map's zoom level.
             PrinterZoomLevelSet printerZoomLevelSet = (PrinterZoomLevelSet)Map1.ZoomLevelSet;
             ZoomLevel currentZoomLevel = printerZoomLevelSet.GetZoomLevel(Map1.CurrentExtent, Map1.ActualWidth, Map1.MapUnit);
+
+            cbxPercentage.SelectionChanged -= cbxPercentage_SelectionChanged;
             cbxPercentage.SelectedItem = printerZoomLevelSet.GetZoomPercentage(currentZoomLevel) + "%";
+            cbxPercentage.SelectionChanged += cbxPercentage_SelectionChanged;
         }
 
         private void Map1_MapClick(object sender, MapClickMapViewEventArgs e)
